@@ -13,10 +13,10 @@ namespace LogisticIntegration.Infrastructure.Persistence.Repositories
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
-        public async Task<TripSettlement> GetByIdAsync(Guid id, CancellationToken cancellationToken)
+        public async Task<TripSettlement?> GetByIdAsync(Guid id, CancellationToken cancellationToken)
         {
             return await _context.TripSettlements
-                .Include(x => x.ProviderLoads)
+                .Include(t => t.ProviderLoads)
                 .FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
         }
 
