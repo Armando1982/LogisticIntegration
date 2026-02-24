@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
-using LogisticIntegration.Domain.Entities;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using LogisticIntegration.Domain.Settlement;
 
 namespace LogisticIntegration.Infrastructure.Persistence.Configurations
 {

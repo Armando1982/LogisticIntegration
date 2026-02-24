@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using LogisticIntegration.Domain.Entities;
+using LogisticIntegration.Domain.Settlement;
 
 namespace LogisticIntegration.Infrastructure.Persistence
 {

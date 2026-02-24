@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using LogisticIntegration.Application.Interfaces;
-using LogisticIntegration.Domain.Entities;
+using LogisticIntegration.Domain.Settlement;
 
 namespace LogisticIntegration.Infrastructure.Persistence.Repositories
 {
