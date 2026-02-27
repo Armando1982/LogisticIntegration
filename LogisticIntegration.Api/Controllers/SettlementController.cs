@@ -34,5 +34,12 @@ namespace LogisticIntegration.Api.Controllers
                 return BadRequest(new { error = ex.Message });
             }
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Create([FromBody] CreateTripSettlementCommand command)
+        {
+            var id = await _mediator.Send(command);
+            return CreatedAtAction(nameof(Create), new { id }, id);
+        }
     }
 }

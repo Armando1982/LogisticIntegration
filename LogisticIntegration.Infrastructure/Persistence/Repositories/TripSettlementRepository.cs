@@ -25,5 +25,11 @@ namespace LogisticIntegration.Infrastructure.Persistence.Repositories
             _context.TripSettlements.Update(settlement);
             await _context.SaveChangesAsync(cancellationToken);
         }
+
+        public async Task AddAsync(TripSettlement settlement, CancellationToken cancellationToken)
+        {
+            await _context.TripSettlements.AddAsync(settlement, cancellationToken);
+            await _context.SaveChangesAsync(cancellationToken);
+        }
     }
 }
